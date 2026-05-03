@@ -1,11 +1,11 @@
-Betreff: Kurze Website-Idee für Der Marktgraf
+Betreff: Kurze Website-Idee für Oys Thai-Küche
 
-Hallo Der Marktgraf-Team,
+Hallo Oys Thai-Küche-Team,
 
 ich bin Florian von Fo.Agentur. Ich habe für euren Betrieb eine kleine Demo-Seite vorbereitet, weil eine eigene Website gerade bei lokalen Betrieben viel helfen kann: Angebot, Öffnungszeiten und Kontakt sind am Handy sofort sichtbar.
 
 Demo:
-https://fo-agentur.github.io/paperclip-outbound/demos/der-marktgraf.html
+https://fo-agentur.github.io/paperclip-outbound/demos/oys-thai-kueche.html
 
 Wenn euch die Richtung gefällt, antwortet kurz auf diese Mail oder ruft mich an: +43 660 519 5080.
 
@@ -14,4 +14,4 @@ Florian Fleisch
 Fo.Agentur
 +43 660 519 5080
 
-QA: Kein Angebot/Betrag genannt. Versand nur, wenn Kontaktadresse final öffentlich verifiziert ist. Kontaktstatus: E-Mail laut Paperclip/Fit-Analyse öffentlich gefunden; vor Versand final revalidieren.
+QA: Kein Angebot/Betrag genannt. Versand nur, wenn Kontaktadresse final öffentlich verifiziert ist. Kontaktstatus: Kein E-Mail-Versand: nur Telefon/Facebook/Directory gefunden. Demo als Design-/Lead-Ersatzkandidat, bis Kontaktadresse sauber belegt ist.

@@ -1,7 +1,6 @@
-# Final Outreach QA
+# QA Reset nach Florian-Feedback
 
-Ausgewählt nach Paperclip Fit Analyst + zusätzlicher Prüfung: keine eigene Website gefunden; Social/Directories zählen nicht; öffentliche E-Mail vorhanden. E-Mails enthalten keine Preisnennung und enthalten Florian Telefonnummer.
+Problem: alte Seiten waren zu generisch, zu ähnlich und zu friseur-lastig.
+Korrektur: drei stärker unterschiedliche mobile-first Konzepte. Nur Der Marktgraf hat aktuell eine nutzbare E-Mail laut Fit-Analyse; Oys Thai und Lemongrass sind bessere Demo-/Lead-Richtungen, aber Versand bleibt blockiert bis Kontaktadresse öffentlich verifiziert ist.
 
-- Der Marktgraf — berny.binder@gmail.com — https://fo-agentur.github.io/paperclip-outbound/demos/der-marktgraf.html — Fit Analyst Quellen: Allbiz/Firmeninfo/Herold — keine eigene Domain, öffentliche E-Mail berny.binder@gmail.com
-- The Men´s Barbershop — themensbarbershoplinz@gmail.com — https://fo-agentur.github.io/paperclip-outbound/demos/the-mens-barbershop-linz.html — Fit Analyst Quellen: Allbiz/Barbershop-Finder — keine eigene Domain, öffentliche E-Mail themensbarbershoplinz@gmail.com
-- Friseur Hair Shine — kija_jusuf1@gmx.at — https://fo-agentur.github.io/paperclip-outbound/demos/friseur-hair-shine.html — Herold: https://www.herold.at/gelbe-seiten/salzburg/bLWkL/friseur-hair-shine/ — keine eigene Domain im Fetch, öffentliche E-Mail
+Keine Angebots- oder Betragsnennung in Drafts. Telefonnummer +43 660 519 5080 enthalten.
