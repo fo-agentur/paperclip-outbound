@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paperclip Outbound OS</title>
+  <meta name="description" content="Human-reviewed outbound engine for AI website demos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#06070a;--panel:#0e1117;--panel2:#141824;--line:#252b3a;--text:#f5f7fb;--muted:#9aa4b2;
+      --green:#71f5b8;--blue:#77a7ff;--orange:#ffbd74;--red:#ff7474;--purple:#cba6ff;--yellow:#ffe17a;
+      --shadow:0 25px 80px rgba(0,0,0,.45);--radius:26px;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 20% 0%,rgba(119,167,255,.22),transparent 35%),radial-gradient(circle at 90% 10%,rgba(113,245,184,.13),transparent 30%),var(--bg);color:var(--text);overflow-x:hidden}
+    .grain{position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:url('data:image/svg+xml,%3Csvg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity="0.5"/%3E%3C/svg%3E')}
+    header{padding:28px 5vw;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:20;background:linear-gradient(to bottom,rgba(6,7,10,.86),rgba(6,7,10,.48));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand{display:flex;align-items:center;gap:13px;font-weight:900;letter-spacing:-.04em;font-size:22px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#071014;font-weight:900;box-shadow:0 0 35px rgba(113,245,184,.25)}
+    nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;padding:10px 13px;border:1px solid transparent;border-radius:999px;font-size:14px}nav a:hover{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.04)}
+    .hero{padding:78px 5vw 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(113,245,184,.28);background:rgba(113,245,184,.08);color:var(--green);border-radius:999px;padding:9px 13px;font-weight:700;font-size:13px;margin-bottom:22px}.pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 20px var(--green)}
+    h1{font-size:clamp(43px,7.4vw,96px);line-height:.9;margin:0 0 22px;letter-spacing:-.075em}.grad{background:linear-gradient(90deg,#fff,var(--green),var(--blue));-webkit-background-clip:text;color:transparent}.lead{color:#c9d1df;font-size:clamp(18px,2vw,23px);line-height:1.45;max-width:720px;margin:0 0 28px}.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{border:0;border-radius:16px;padding:15px 19px;font-weight:800;color:#071014;background:var(--green);box-shadow:0 12px 40px rgba(113,245,184,.16);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px}.btn.secondary{background:rgba(255,255,255,.07);color:var(--text);border:1px solid var(--line);box-shadow:none}.btn:hover{transform:translateY(-1px)}
+    .device{border:1px solid var(--line);border-radius:32px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));box-shadow:var(--shadow);padding:18px}.screen{border-radius:23px;background:#0b0e14;overflow:hidden;border:1px solid rgba(255,255,255,.08)}.topbar{display:flex;gap:7px;padding:13px;border-bottom:1px solid var(--line)}.dot{width:10px;height:10px;border-radius:50%;background:#ff6971}.dot:nth-child(2){background:#ffc75e}.dot:nth-child(3){background:#66e49c}.dash{padding:18px;display:grid;gap:13px}.lead-card{display:grid;grid-template-columns:1fr auto;gap:10px;padding:15px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:18px}.score{font-weight:900;color:var(--green)}.small{font-size:12px;color:var(--muted)}.tag{display:inline-flex;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:800;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#ccd4e2}.tag.warn{color:var(--orange);border-color:rgba(255,189,116,.25)}.tag.good{color:var(--green);border-color:rgba(113,245,184,.25)}
+    section{padding:54px 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:24px}h2{font-size:clamp(30px,4vw,54px);letter-spacing:-.055em;margin:0}.muted{color:var(--muted);line-height:1.55}.grid{display:grid;gap:18px}.cols3{grid-template-columns:repeat(3,1fr)}.cols4{grid-template-columns:repeat(4,1fr)}.card{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:var(--radius);padding:23px;box-shadow:0 18px 50px rgba(0,0,0,.18)}.card h3{margin:0 0 10px;font-size:21px;letter-spacing:-.03em}.icon{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:rgba(119,167,255,.12);border:1px solid rgba(119,167,255,.22);margin-bottom:16px;font-size:21px}
+    .pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.step{position:relative;padding:18px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.045);min-height:155px}.step b{font-size:15px}.num{width:28px;height:28px;border-radius:10px;background:var(--blue);color:#05070a;display:grid;place-items:center;font-weight:900;margin-bottom:12px}.approval{border-color:rgba(255,225,122,.35);background:rgba(255,225,122,.07)}.approval .num{background:var(--yellow)}
+    .board{display:grid;grid-template-columns:320px 1fr;gap:18px}.list{display:grid;gap:10px}.lead-row{padding:14px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);cursor:pointer}.lead-row.active{border-color:rgba(113,245,184,.55);background:rgba(113,245,184,.08)}.detail{min-height:480px}.metric{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.metric div{padding:15px;border-radius:18px;background:#0c1018;border:1px solid var(--line)}.metric strong{display:block;font-size:26px;letter-spacing:-.05em}.mail{white-space:pre-wrap;background:#080b10;border:1px solid var(--line);border-radius:20px;padding:18px;color:#d9e0ea;line-height:1.55}.reviewbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.approve{background:var(--green)}.revise{background:var(--orange)}.reject{background:var(--red);color:white}.footer{padding:40px 5vw 70px;color:var(--muted);text-align:center}
+    @media(max-width:980px){.hero,.board{grid-template-columns:1fr}.cols3,.cols4,.pipeline,.metric{grid-template-columns:1fr 1fr}nav{display:none}}@media(max-width:620px){.cols3,.cols4,.pipeline,.metric{grid-template-columns:1fr}header{position:relative}.hero{padding-top:35px}}
+  </style>
+</head>
+<body>
+<div class="grain"></div>
+<header>
+  <div class="brand"><div class="logo">P</div>Paperclip Outbound OS</div>
+  <nav><a href="#rollen">Rollen</a><a href="#pipeline">Pipeline</a><a href="#dashboard">Review</a><a href="#mvp">MVP</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow"><span class="pulse"></span> Kein Spam-Bot · Human reviewed sales engine</div>
+      <h1>Findet Kunden. Baut Demos. <span class="grad">Fragt vor jeder Mail.</span></h1>
+      <p class="lead">Ein Agenten-System für Florians Webseiten-Business: Lead Finder sucht exakt passende Firmen, Analyst erkennt Website-Schwächen, Coder baut eine schnelle Demo-Seite, Copywriter formuliert die Mail — und CEO/Reviewer gibt jede einzelne E-Mail frei.</p>
+      <div class="actions"><a class="btn" href="#dashboard">Dashboard ansehen →</a><a class="btn secondary" href="#mvp">MVP-Plan</a></div>
+    </div>
+    <div class="device" aria-label="Dashboard preview"><div class="screen"><div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="dash">
+      <div class="lead-card"><div><b>Hotel Alpenblick</b><div class="small">Pension · alte Website · kein klarer CTA</div></div><div class="score">94%</div><span class="tag good">Demo bereit</span><span class="tag warn">Review nötig</span></div>
+      <div class="lead-card"><div><b>Kosmetikstudio Luna</b><div class="small">Instagram stark · Website schwach mobil</div></div><div class="score">88%</div><span class="tag good">Fit sehr gut</span><span class="tag warn">Mail offen</span></div>
+      <div class="lead-card"><div><b>Fahrschule Mayer</b><div class="small">Lokale Suche · Conversion-Potenzial</div></div><div class="score">81%</div><span class="tag">Analyse</span><span class="tag warn">Noch keine Demo</span></div>
+    </div></div></div>
+  </section>
+
+  <section id="rollen">
+    <div class="section-head"><h2>Die Firma im Bot</h2><p class="muted">Jede Rolle hat klare Verantwortung. Kein Agent verschickt allein.</p></div>
+    <div class="grid cols3">
+      <div class="card"><div class="icon">👔</div><h3>CEO / Florian</h3><p class="muted">Setzt Branche, Qualität und Freigaben. Letzte Entscheidung bei jeder ausgehenden Mail.</p></div>
+      <div class="card"><div class="icon">🔎</div><h3>Lead Finder</h3><p class="muted">Sucht Firmen mit schlechter Website, klarem Bedarf und echtem Umsatzpotenzial.</p></div>
+      <div class="card"><div class="icon">🧠</div><h3>Analyst</h3><p class="muted">Prüft Website, Positionierung, Mobile, CTA, Vertrauen und erstellt eine kurze Diagnose.</p></div>
+      <div class="card"><div class="icon">💻</div><h3>Coder</h3><p class="muted">Baut schnelle Demo-Landingpage als Preview-Link. Schön genug, um Interesse zu erzeugen.</p></div>
+      <div class="card"><div class="icon">✍️</div><h3>Copywriter</h3><p class="muted">Schreibt kurze, persönliche E-Mail mit konkretem Hinweis und Demo-Link.</p></div>
+      <div class="card"><div class="icon">🛡️</div><h3>Reviewer</h3><p class="muted">Checkt Wahrheit, Spam-Risiko, Ton, Datenschutz und ob die Demo wirklich passt.</p></div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="section-head"><h2>Outbound Pipeline</h2><p class="muted">Drei harte Freigabe-Gates verhindern billigen Spam.</p></div>
+    <div class="pipeline">
+      <div class="step"><div class="num">1</div><b>Zielbranche</b><p class="small">z.B. Hotels, Handwerker, Restaurants, Kosmetik, Fahrschulen.</p></div>
+      <div class="step"><div class="num">2</div><b>Lead Suche</b><p class="small">20 Kandidaten finden, Score vergeben, schwache Leads löschen.</p></div>
+      <div class="step approval"><div class="num">3</div><b>Lead Approval</b><p class="small">Nur gute Leads bekommen überhaupt eine Demo.</p></div>
+      <div class="step"><div class="num">4</div><b>Demo bauen</b><p class="small">Schnelle, konkrete Preview-Seite mit besserer Struktur.</p></div>
+      <div class="step approval"><div class="num">5</div><b>Mail Review</b><p class="small">Text, Demo und Empfänger werden geprüft.</p></div>
+      <div class="step approval"><div class="num">6</div><b>Send</b><p class="small">Erst nach Freigabe. Antworten landen im Follow-up Board.</p></div>
+    </div>
+  </section>
+
+  <section id="dashboard">
+    <div class="section-head"><h2>Review Dashboard</h2><p class="muted">So soll der spätere Arbeitsbildschirm aussehen.</p></div>
+    <div class="board">
+      <div class="card list" id="leadList"></div>
+      <div class="card detail">
+        <div class="metric"><div><span class="small">Fit Score</span><strong id="fit">94%</strong></div><div><span class="small">Status</span><strong id="status">Review</strong></div><div><span class="small">Demo</span><strong id="demo">Ready</strong></div><div><span class="small">Risiko</span><strong id="risk">Low</strong></div></div>
+        <h3 id="company">Hotel Alpenblick</h3>
+        <p class="muted" id="analysis">Analyse lädt…</p>
+        <h3>Mail-Entwurf</h3>
+        <div class="mail" id="mail"></div>
+        <div class="reviewbar"><button class="btn approve" onclick="mark('approved')">Approve</button><button class="btn revise" onclick="mark('revise')">Revise</button><button class="btn reject" onclick="mark('rejected')">Reject</button></div>
+        <p class="small" id="decision">Noch nicht freigegeben. Keine Mail wird verschickt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mvp">
+    <div class="section-head"><h2>MVP in 4 Stufen</h2><p class="muted">Erst Qualität beweisen, dann Versand automatisieren.</p></div>
+    <div class="grid cols4">
+      <div class="card"><h3>1. Lead Board</h3><p class="muted">Tabelle mit Firma, Website, Kontakt, Score, Status und Notizen.</p></div>
+      <div class="card"><h3>2. Demo Builder</h3><p class="muted">Aus Website-Daten automatisch Demo-Konzept und HTML-Preview erzeugen.</p></div>
+      <div class="card"><h3>3. Review Gate</h3><p class="muted">Approve / Revise / Reject pro Lead, Demo und Mail.</p></div>
+      <div class="card"><h3>4. Mail Integration</h3><p class="muted">Erst dann Gmail/SMTP/API anbinden — mit täglichem Limit und Tracking.</p></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">Paperclip Outbound OS · gebaut als erster klickbarer Blueprint für Florian</footer>
+<script>
+const leads=[
+ {c:'Hotel Alpenblick',fit:'94%',status:'Review',demo:'Ready',risk:'Low',analysis:'Kleine Pension mit alt wirkender Website, schwacher mobiler Struktur und keinem starken Buchungs-CTA. Sehr guter Fit, weil eine modernere Seite direkt Buchungsanfragen verbessern kann.',mail:'Betreff: Kurze Idee für Ihre Webseite\n\nHallo Hotel Alpenblick Team,\n\nich habe mir Ihre aktuelle Webseite kurz angesehen und eine konkrete Idee gehabt, wie man Ihre Pension moderner und buchungsstärker präsentieren könnte.\n\nIch habe dafür eine kleine unverbindliche Demo gebaut:\n[Demo-Link]\n\nMir ist besonders aufgefallen, dass die Zimmer und die Lage noch viel emotionaler gezeigt werden könnten. Die Demo zeigt, wie das mit klareren Bildern, besserem mobilen Aufbau und einem stärkeren Anfrage-CTA wirken könnte.\n\nWenn Sie möchten, kann ich Ihnen daraus eine fertige Webseite machen.\n\nViele Grüße\nFlorian'},
+ {c:'Kosmetikstudio Luna',fit:'88%',status:'Demo',demo:'Draft',risk:'Low',analysis:'Starker Social-Media-Auftritt, aber die Website wirkt nicht hochwertig genug. Gute Chance für eine elegante Landingpage mit Behandlungsübersicht und Termin-CTA.',mail:'Betreff: Kleine Design-Idee für Ihr Kosmetikstudio\n\nHallo Luna Team,\n\nich habe gesehen, dass Ihr Instagram-Auftritt sehr schön ist — Ihre Website könnte diesen hochwertigen Eindruck noch stärker transportieren.\n\nIch habe eine kurze Demo-Idee vorbereitet:\n[Demo-Link]\n\nDie Demo zeigt, wie Ihre Behandlungen moderner, ruhiger und vertrauensvoller präsentiert werden könnten.\n\nViele Grüße\nFlorian'},
+ {c:'Fahrschule Mayer',fit:'81%',status:'Analyse',demo:'Nein',risk:'Medium',analysis:'Lokaler Dienstleister mit sichtbarem Bedarf. Vor Kontakt muss aber noch geprüft werden, ob die vorhandene Website aktiv gepflegt wird.',mail:'Betreff: Idee für mehr Fahrschüler-Anfragen\n\nHallo Herr/Frau Mayer,\n\nich habe mir Ihre Website angesehen und glaube, dass man die Anmeldung und Infos für neue Fahrschüler deutlich klarer darstellen könnte.\n\nIch würde Ihnen gerne eine kurze Demo zeigen:\n[Demo-Link]\n\nViele Grüße\nFlorian'}
+];
+let selected=0;function render(){const list=document.getElementById('leadList');list.innerHTML=leads.map((l,i)=>`<div class="lead-row ${i===selected?'active':''}" onclick="selected=${i};render()"><b>${l.c}</b><div class="small">${l.fit} · ${l.status} · Risiko ${l.risk}</div></div>`).join('');const l=leads[selected];company.textContent=l.c;fit.textContent=l.fit;status.textContent=l.status;demo.textContent=l.demo;risk.textContent=l.risk;analysis.textContent=l.analysis;mail.textContent=l.mail;decision.textContent='Noch nicht freigegeben. Keine Mail wird verschickt.'}function mark(x){decision.textContent=x==='approved'?'Freigegeben im Mockup. Im echten System würde jetzt erst der Versand möglich.':x==='revise'?'Zur Überarbeitung markiert. Coder/Copywriter müssen nachbessern.':'Abgelehnt. Lead wird nicht kontaktiert.'}render();
+</script>
+</body>
+</html>
