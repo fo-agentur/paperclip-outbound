@@ -1,7 +1,7 @@
-# Overnight Outreach QA
+# Final Outreach QA
 
-Selected leads all have public directory pages with emails and no own website visible in fetched Herold extracts. Social/directory pages are not counted as own websites. Emails mention no price and include Florian phone number.
+Ausgewählt nach Paperclip Fit Analyst + zusätzlicher Prüfung: keine eigene Website gefunden; Social/Directories zählen nicht; öffentliche E-Mail vorhanden. E-Mails enthalten keine Preisnennung und enthalten Florian Telefonnummer.
 
-- Fundas Friseur-Atelier — friseur.funda@gmail.com — demo: https://fo-agentur.github.io/paperclip-outbound/demos/fundas-friseur-atelier.html — source: Herold: https://www.herold.at/gelbe-seiten/salzburg/QqvJj/fundas-friseur-atelier/
-- Friseur Hair Shine — kija_jusuf1@gmx.at — demo: https://fo-agentur.github.io/paperclip-outbound/demos/friseur-hair-shine.html — source: Herold: https://www.herold.at/gelbe-seiten/salzburg/bLWkL/friseur-hair-shine/
-- Oscar Alex Friseur & Barber Shop — alexander1979@gmail.com — demo: https://fo-agentur.github.io/paperclip-outbound/demos/oscar-alex-barber-shop.html — source: Herold: https://www.herold.at/gelbe-seiten/seekirchen-am-wallersee/VdNkQ/oscar-alex-friseur-und-barber-shop/
+- Der Marktgraf — berny.binder@gmail.com — https://fo-agentur.github.io/paperclip-outbound/demos/der-marktgraf.html — Fit Analyst Quellen: Allbiz/Firmeninfo/Herold — keine eigene Domain, öffentliche E-Mail berny.binder@gmail.com
+- The Men´s Barbershop — themensbarbershoplinz@gmail.com — https://fo-agentur.github.io/paperclip-outbound/demos/the-mens-barbershop-linz.html — Fit Analyst Quellen: Allbiz/Barbershop-Finder — keine eigene Domain, öffentliche E-Mail themensbarbershoplinz@gmail.com
+- Friseur Hair Shine — kija_jusuf1@gmx.at — https://fo-agentur.github.io/paperclip-outbound/demos/friseur-hair-shine.html — Herold: https://www.herold.at/gelbe-seiten/salzburg/bLWkL/friseur-hair-shine/ — keine eigene Domain im Fetch, öffentliche E-Mail
