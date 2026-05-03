@@ -1,0 +1,17 @@
+Betreff: Kurze Idee für Friseur Hair Shine
+
+Hallo Friseur Hair Shine-Team,
+
+ich bin Florian von Fo.Agentur. Mir ist aufgefallen, dass ich für Friseur Hair Shine zwar Einträge wie Herold finde, aber keine eigene Website, auf der Leistungen, Öffnungszeiten und Kontakt schön gebündelt sind.
+
+Ich habe deshalb eine kleine, unverbindliche Demo-Seite vorbereitet, wie ein moderner Auftritt für euch aussehen könnte:
+https://fo-agentur.github.io/paperclip-outbound/demos/friseur-hair-shine.html
+
+Die Seite ist mobil gedacht, wirkt bewusst nicht nach Baukasten und greift die wichtigsten Infos zu eurem Salon direkt auf — damit neue Kund:innen schneller verstehen, was ihr anbietet und wie sie euch erreichen.
+
+Wenn euch die Richtung gefällt, antwortet einfach kurz auf diese Mail oder ruft mich direkt an: +43 660 519 5080.
+
+Liebe Grüße
+Florian Fleisch
+Fo.Agentur
++43 660 519 5080
